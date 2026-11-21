@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Check Your Inbox · Covenant Restored</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div data-header></div>
+  <main>
+    <section class="hero">
+      <div class="wrap narrow" data-reveal data-hero>
+        <span class="label">You're all set</span>
+        <h1 id="hello">Check your inbox.</h1>
+        <p class="lead">Your full Marriage Scorecard results are on their way, along with tips for your two weakest pillars and your free 30-minute masterclass.</p>
+        <p class="muted">Don't see it in a few minutes? Check your Promotions or Spam folder and move it to your inbox so you don't miss what's next.</p>
+      </div>
+    </section>
+    <section class="alt">
+      <div class="wrap narrow center">
+        <span class="label">While you wait</span>
+        <h2>Here's the truth: knowing your score isn't enough.</h2>
+        <p class="muted">Couples change when they stop guessing and start growing together, with teaching, accountability and community. That's what the monthly Cohort is for.</p>
+        <a class="btn solid" href="index.html#cohort"><span>Learn about the Cohort</span></a>
+        <p class="muted" style="margin-top:1.5em;font-size:.9rem">Invite your spouse to take the Scorecard too, and compare notes over dinner. <br><a href="scorecard.html">Share the Scorecard</a></p>
+      </div>
+    </section>
+  </main>
+  <div data-footer></div>
+  <script src="js/content.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/site.js"></script>
+  <script>
+    try {
+      const r = JSON.parse(sessionStorage.getItem("scorecard") || "null");
+      if (r && r.name) document.getElementById("hello").textContent = `${r.name}, check your inbox.`;
+    } catch (_) {}
+  </script>
+</body>
+</html>

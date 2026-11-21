@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marriage Scorecard · Covenant Restored</title>
+  <meta name="description" content="Take the free Marriage Scorecard: 24 questions across six biblical pillars of marriage.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div data-header></div>
+
+  <main>
+    <section class="quiz-wrap">
+      <div class="wrap narrow">
+
+        <div id="intro">
+          <span class="label">Free Marriage Scorecard</span>
+          <h1>How healthy is your marriage, <em style="color:var(--accent)">really?</em></h1>
+          <p class="lead">24 statements across six biblical pillars. Answer honestly for how things are <em>today</em>, not how you wish they were. About 4 minutes.</p>
+          <p class="muted" style="max-width:560px;margin-bottom:40px">You'll see your overall score right away. Your full pillar-by-pillar assessment, tips for your weakest areas and a free 30-minute masterclass are sent to your inbox.</p>
+          <button class="btn solid" id="start"><span>Begin the Scorecard</span></button>
+        </div>
+
+        <form id="quiz" hidden>
+          <div class="step-meta"><span id="step-label"></span><span id="step-count" class="muted"></span></div>
+          <div class="progress" aria-hidden="true"><div id="progress"></div></div>
+          <h2 id="pillar-name"></h2>
+          <p class="pillar-verse" id="pillar-verse"></p>
+          <div id="questions"></div>
+          <p class="err" id="quiz-err" role="alert"></p>
+          <div class="quiz-nav">
+            <button type="button" class="btn ghost noarrow" id="back"><span>Back</span></button>
+            <button type="submit" class="btn solid" id="next"><span id="next-label">Next</span></button>
+          </div>
+        </form>
+
+        <div id="results" hidden>
+          <div class="results-head">
+            <span class="label">Your Results</span>
+            <div class="score-num"><span id="overall"></span><sup>%</sup></div>
+            <span class="band" id="band"></span>
+            <p class="lead" id="encourage" style="margin:24px auto 0"></p>
+          </div>
+
+          <div class="bars" id="bars"></div>
+
+          <p class="weak-callout">Your biggest growth area right now is <strong id="weak-name"></strong>.</p>
+
+          <div class="locked">
+            <span class="label">Unlock your full report</span>
+            <h3>Get your full results by email</h3>
+            <p class="muted" style="margin-bottom:28px">Your score only tells you <em>where</em>. Your full report tells you <em>what to do next</em>:</p>
+            <ul>
+              <li>A written assessment of all six pillars</li>
+              <li>Practical tips and Scripture for your two weakest areas</li>
+              <li>A free 30-minute masterclass from Terrye</li>
+              <li>A "start this week" challenge for you as a couple</li>
+            </ul>
+            <form id="lead" novalidate>
+              <div class="form-row">
+                <div><label class="f" for="name">First name</label><input type="text" id="name" autocomplete="given-name" required></div>
+                <div><label class="f" for="email">Email</label><input type="email" id="email" autocomplete="email" required></div>
+              </div>
+              <label class="consent"><input type="checkbox" id="consent" required>
+                <span>Send me my results and occasional encouragement from Terrye. Unsubscribe anytime. See our <a href="privacy.html">Privacy Policy</a>.</span></label>
+              <p class="err" id="lead-err" role="alert"></p>
+              <button class="btn solid" type="submit" id="send"><span id="send-label">Send my full results</span></button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+
+  <script src="js/content.js"></script>
+  <script src="js/config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/scorecard.js"></script>
+</body>
+</html>

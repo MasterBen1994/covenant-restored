@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Masterclass · Covenant Restored</title>
+  <!-- Unlisted: link is only sent in the results email. Real gating comes with login in Phase 2. -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div data-header></div>
+  <main>
+    <section class="hero">
+      <div class="wrap narrow">
+        <span class="label">Free Masterclass</span>
+        <h1>The Marriage God Intended: Where to Start</h1>
+        <p class="muted">A 30-minute teaching from <span data-site="founderName"></span>. Grab your spouse, a notebook and something warm to drink.</p>
+        <div class="video ph" id="video" data-alt="Masterclass video"></div>
+        <div class="card" style="margin-top:28px">
+          <h3>In this masterclass</h3>
+          <ul class="muted" style="margin:0;padding-left:1.2em">
+            <li>Why "good enough" marriages quietly drift, and how to spot it early</li>
+            <li>The one habit that changes the spiritual temperature of your home</li>
+            <li>How to talk about your scorecard results without it becoming a fight</li>
+            <li>Your first step as a couple this week</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="cta-band">
+      <div class="wrap narrow">
+        <h2>Ready to go deeper?</h2>
+        <p>This was just the surface. Inside the monthly Cohort, we go all the way in, together.</p>
+        <a class="btn light" href="index.html#cohort"><span>Join the Cohort</span></a>
+        <p style="margin-top:1.2em;font-size:.9rem">Or get every Season 1 masterclass with the Season Pass (coming soon).</p>
+      </div>
+    </section>
+  </main>
+  <div data-footer></div>
+  <script src="js/content.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/site.js"></script>
+  <script>
+    const url = window.SITE.masterclassEmbedUrl;
+    if (url) document.getElementById("video").innerHTML =
+      `<iframe src="${url}" title="Masterclass" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+  </script>
+</body>
+</html>
