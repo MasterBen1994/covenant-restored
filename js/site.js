@@ -74,7 +74,7 @@
     const src = (S.images || {})[el.dataset.img];
     if (src) {
       el.classList.add("has-img");
-      el.insertAdjacentHTML("afterbegin", `<img src="${src}" alt="${el.dataset.alt || ""}" loading="lazy">`);
+      el.insertAdjacentHTML("afterbegin", `<img src="${src}" alt="${el.dataset.alt || ""}" loading="${el.dataset.img === "hero" ? "eager" : "lazy"}">`);
     } else if (el.dataset.alt) {
       el.insertAdjacentHTML("beforeend", `<span class="ph-label">Photo · ${el.dataset.alt}</span>`);
     }

@@ -16,12 +16,13 @@ window.SITE = {
 
   // Drop photos into assets/ and set paths here. Empty = styled placeholder.
   images: {
-    hero: "",      // couple at golden hour, landscape, 2400px wide
-    portrait: "",  // Terrye & husband, portrait
-    hands: "",     // hands / wedding rings close-up
-    bible: "",     // open Bible, prayer, coffee
+    hero: "assets/hero.jpg",
+    portrait: "",  // [CLIENT] real photo of Terrye & husband, portrait 4:5
+    hands: "assets/hands.jpg",
+    bible: "assets/bible.jpg",
     family: "",    // family / blended family moment
-    cohort: ""     // couples in conversation, landscape
+    cohort: "assets/cohort.jpg",
+    masterclass: "assets/masterclass-poster.jpg"
   },
 
   testimonies: [

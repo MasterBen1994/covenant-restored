@@ -123,6 +123,7 @@ section { padding: clamp(80px, 12vw, 160px) 0; }
 /* ---------- Home: hero ---------- */
 .hero-full { position: relative; height: 100svh; min-height: 620px; color: var(--cream); overflow: hidden; padding: 0; }
 .hero-full > .ph { position: absolute; inset: 0; }
+.hero-full > .ph img { object-position: 74% center; }
 .hero-full > .ph::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(30,20,16,.35) 0%, rgba(30,20,16,.08) 40%, rgba(30,20,16,.55) 100%); }
 .hero-full .inner { position: relative; z-index: 2; height: 100%; display: grid; grid-template-rows: 1fr auto; padding: 120px var(--gutter) 40px; max-width: 1440px; margin: 0 auto; }
 .hero-full h1 { align-self: center; font-weight: 300; text-transform: uppercase; font-size: clamp(3rem, 12vw, 9.5rem); line-height: .92; letter-spacing: -.01em; margin: 0; }
